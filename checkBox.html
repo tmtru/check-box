@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link type="text/css" rel="stylesheet" href="./csscheck.css">
+    <script type="text/javascript" src="./banner.js"></script>
+</head>
+
+<body>
+
+    <h2>Bannerocity</h2>
+
+    <div class="row">
+        <div class="col-75">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-50">
+                        <h3>Message</h3>
+
+                        <label for="cname">Enter the banner message</label>
+                        <input type="text" id="cname" name="mess" placeholder=""
+                            onblur="validateNonEmpty(this,document.getElementById('err-mess'))">
+                        <div id="err-mess" class="error" style="color: rgb(180, 80, 80)"></div>
+                        <label for="ccnum">Note</label>
+                        <input type="text" id="ccnum" name="more" placeholder="About the banner"
+                            onblur="validateNonEmpty(this,document.getElementById('err-note'))">
+                        <div id="err-note" class="error" style="color: rgb(180, 80, 80)"></div>
+                        <label for="expmonth">Date</label>
+                        <input type="text" id="expmonth" name="exp" placeholder="The date for the banner"
+                            onblur="validateDate(this,document.getElementById('err-date'))">
+                        <div id="err-date" class="error" style="color: rgb(180, 80, 80)"></div>
+
+                    </div>
+
+                    <div class=" col-50">
+                        <h3>Address</h3>
+                        <div>
+                            <label for="fname">Full Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="John M. Doe"
+                                onblur="validateNonEmpty(this,document.getElementById('err-name'))">
+                            <div id="err-name" class="error" style="color: rgb(180, 80, 80)"></div>
+                        </div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="john@example.com"
+                            onblur="validateEmail(this,document.getElementById('err-email'))">
+                        <div id="err-email" class="error" style="color: rgb(180, 80, 80)"></div>
+                        <label for="adr">Address</label>
+                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"
+                            onblur="validateNonEmpty(this,document.getElementById('err-add'))">
+                        <div id="err-add" class="error" style="color: rgb(180, 80, 80)"></div>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="New York"
+                            onblur="validateNonEmpty(this,document.getElementById('err-city'))">
+                        <div id="err-city" class="error" style="color: rgb(180, 80, 80)"></div>
+
+                        <div class="row">
+                            <div class="col-50">
+                                <label for="state">State</label>
+                                <input type="text" id="state" name="state" placeholder="NY">
+                            </div>
+                            <div class="col-50">
+                                <label for="zip">Zip</label>
+                                <input type="text" id="zip" name="zip" placeholder="10001">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <label>
+                    <input type="checkbox"> Shipping address same as billing
+                </label>
+                <br>
+                <input type="submit" value="Order Banner" class="btn">
+
+            </div>
+        </div>
+        <div class="col-25">
+            <div class="container">
+                <h4>Option <span class="price" style="color:black"></span>
+                </h4>
+                <p><a href="#">Option 1</a> <span class="price">$5</span>
+                    <input class="price2" type="checkbox" name="op1" value="5" onchange="sumPrice()">
+
+                </p>
+                <p><a href="#">Option 2</a> <span class="price">$6</span>
+                    <input class="price2" type="checkbox" name="op2" value="6" onchange="sumPrice()">
+                </p>
+                <p><a href="#">Option 3</a> <span class="price">$8</span>
+                    <input class="price2" type="checkbox" name="op3" value="8" onchange="sumPrice()">
+                </p>
+                <p><a href="#">Option 4</a> <span class="price">$10</span>
+                    <input class="price2" type="checkbox" name="op4" value="10" onchange="sumPrice()">
+                </p>
+                <hr>
+                <p>Total <span id="totalPrice" class="price1" style="color:black">$0</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

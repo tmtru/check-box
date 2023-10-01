@@ -1,0 +1,107 @@
+ body {
+    font-family: Arial;
+    font-size: 17px;
+    padding: 50px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.error {
+    margin-top: -15px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-style: italic;
+    
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+} 
+
+
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+
+.col-50 {
+    flex: 0 1 50%;
+}
+
+.col-75 {
+    flex: 50%;
+}
+.col-25 {
+    flex: 0 1 25%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 30px;
+}
+
+
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+
+
+.btn {
+    background-color: #1781d8;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    
+} 
+
+.btn:hover {
+    background-color: #59855b;
+}
+
+a {
+    color: #2196F3;
+}
+
+hr {
+    border: 1px solid lightgrey;
+}
+
+.price,.price1 {
+    float: right;
+    color: grey;
+}
+
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col-25 {
+        margin-bottom: 20px;
+    }
+} 
